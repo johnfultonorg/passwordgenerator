@@ -32,6 +32,7 @@
             this.tbThis = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
+            this.cbPronouncable = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // tbDisplay
@@ -53,7 +54,7 @@
             // 
             // btnRun
             // 
-            this.btnRun.Location = new System.Drawing.Point(231, 331);
+            this.btnRun.Location = new System.Drawing.Point(219, 368);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(75, 36);
             this.btnRun.TabIndex = 2;
@@ -63,7 +64,7 @@
             // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(28, 331);
+            this.btnCopy.Location = new System.Drawing.Point(28, 368);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(75, 36);
             this.btnCopy.TabIndex = 3;
@@ -71,11 +72,24 @@
             this.btnCopy.UseVisualStyleBackColor = true;
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
+            // cbPronouncable
+            // 
+            this.cbPronouncable.AutoSize = true;
+            this.cbPronouncable.Checked = true;
+            this.cbPronouncable.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbPronouncable.Location = new System.Drawing.Point(32, 315);
+            this.cbPronouncable.Name = "cbPronouncable";
+            this.cbPronouncable.Size = new System.Drawing.Size(133, 24);
+            this.cbPronouncable.TabIndex = 4;
+            this.cbPronouncable.Text = "Pronouncable";
+            this.cbPronouncable.UseVisualStyleBackColor = true;
+            // 
             // Top
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 394);
+            this.ClientSize = new System.Drawing.Size(324, 434);
+            this.Controls.Add(this.cbPronouncable);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.tbThis);
@@ -96,6 +110,7 @@
         private System.Windows.Forms.TextBox tbThis;
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.Button btnCopy;
+        private System.Windows.Forms.CheckBox cbPronouncable;
     }
 }
 

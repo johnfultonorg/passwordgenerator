@@ -13,7 +13,7 @@ namespace PasswordGenerator
         private void btnRun_Click(object sender, EventArgs e)
         {
             Password newPassword = new Password();
-            string result = newPassword.getPassword();
+            string result = newPassword.getPassword(cbPronouncable.Checked);
             tbDisplay.AppendText(result + "\r\n");
             tbDisplay.ScrollToCaret();
 
