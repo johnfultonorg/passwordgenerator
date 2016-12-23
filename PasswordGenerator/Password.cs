@@ -65,6 +65,8 @@ namespace PasswordGenerator
 
         string getPhoneme()
         {
+            // Phonemes (actaully graphemes) from http://www.dyslexia-reading-well.com/44-phonemes-in-english.html
+
             string[] phoneme =
             {
                 "a", "ae", "ai", "aigh", "ar", "au", "augh", "augur", "aw", "ay", "ayer",
@@ -80,6 +82,7 @@ namespace PasswordGenerator
                 "ul", "uoy", "ur", "ure", "uy", "v", "ve", "w", "wh", "wr", "x", "y",
                 "ye", "yr", "yu", "z", "ze", "zz"
             };
+
             return chooser(phoneme);
         }
 
