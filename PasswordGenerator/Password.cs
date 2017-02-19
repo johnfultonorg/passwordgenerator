@@ -5,9 +5,14 @@ namespace PasswordGenerator
     class Password
     {
         Random thisRandom = new Random();
+        const int LENGTH = 12;
 
         public string getPassword(Boolean pronouncable)
         {
+            // A digit, an uppercase letter, lowercase characers, 
+            // and ending with a special character.
+            // Total lenght is 15 to 19 characters
+
             string result = "";
 
             result += getDigit();
@@ -17,7 +22,7 @@ namespace PasswordGenerator
             {
                 //english phonemes
                 string english = string.Empty;
-                while (english.Length < 12)
+                while (english.Length < LENGTH)
                 {
                     english += getPhoneme();
                 }
@@ -28,7 +33,7 @@ namespace PasswordGenerator
             else
             {
                 // any old characters
-                for (int x = 0; x < 12; x++)
+                for (int x = 0; x < LENGTH; x++)
                 {
                     result += getLowerCase();
                 }
@@ -41,24 +46,28 @@ namespace PasswordGenerator
 
         string getUpperCase()
         {
+            // unambigious characters (no 'I' or 'O')
             string upper = "ABCDEFGHJKLMNPQRSTUVWXYZ";
             return chooser(upper);
         }
 
         string getLowerCase()
         {
+            // unambigious characters (no 'i', 'l', or 'o')
             string lower = "abcdefghjknmpqrstuvwxyz";
             return chooser(lower);
         }
 
         string getDigit()
         {
+            // unambigious characters (no 1 or 0)
             string digits = "23456789";
             return chooser(digits);
         }
 
         string getSpecial()
         {
+            // shifted numbers from QWERTY keyboard
             string special = "!@#$%^&*()";
             return chooser(special);
         }
