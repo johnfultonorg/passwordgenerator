@@ -29,6 +29,12 @@ namespace PasswordGenerator
         {
 
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmAbout = new About();
+            frmAbout.ShowDialog(); 
+        }
     }
 }
 
