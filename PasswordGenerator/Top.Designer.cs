@@ -117,10 +117,8 @@
             this.Controls.Add(this.tbDisplay);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Top";
-            this.Text = "Password Generator";
+            this.Text = "Pwd Gen";
             this.Load += new System.EventHandler(this.Top_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
