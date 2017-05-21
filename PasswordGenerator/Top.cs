@@ -13,7 +13,23 @@ namespace PasswordGenerator
         private void btnRun_Click(object sender, EventArgs e)
         {
             Password newPassword = new Password();
-            string result = newPassword.getPassword(cbPronouncable.Checked);
+            Password.PasswordType thisType;
+            if (rbSimple.Checked)
+            {
+                thisType = Password.PasswordType.Simple;
+            }
+            else if (rbPronouncable.Checked)
+            {
+                thisType = Password.PasswordType.Pronouncable;
+            }
+            else
+            {
+                thisType = Password.PasswordType.Xkcd;
+            }
+
+
+            string result = newPassword.getPassword(thisType);
+
             tbDisplay.AppendText(result + "\r\n");
             tbDisplay.ScrollToCaret();
 
@@ -35,6 +51,7 @@ namespace PasswordGenerator
             Form frmAbout = new About();
             frmAbout.ShowDialog(); 
         }
+
     }
 }
 

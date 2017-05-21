@@ -20,6 +20,7 @@ namespace PasswordGenerator
         private void About_Load(object sender, EventArgs e)
         {
             txtAbout.Text = "Copyright (c) 2017 TechElevator, LLC" + System.Environment.NewLine +
+                "Version " + Application.ProductVersion + System.Environment.NewLine +
                 "All Rights Reserved." + System.Environment.NewLine +
                 "John Fulton" + System.Environment.NewLine +
                 "john@TechElevator.com";
@@ -29,6 +30,11 @@ namespace PasswordGenerator
         private void btnOk_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtAbout_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
