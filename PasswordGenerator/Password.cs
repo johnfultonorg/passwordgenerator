@@ -9,7 +9,8 @@ namespace PasswordGenerator
 
         public enum PasswordType { Simple = 0, Pronouncable = 1, Xkcd = 2 };
 
-        public string getPassword(PasswordType type)
+        public string getPassword(PasswordType type, Boolean digit,
+            Boolean upperCase, Boolean specialChar)
         {
             string result = "";
 
@@ -19,13 +20,25 @@ namespace PasswordGenerator
                 // and ending with a special character.
                 // Total lenght is 15 to 19 characters
 
-                result += getDigit();
-                result += getUpperCase();
+                if (digit)
+                {
+                    result += getDigit();
+                }
+
+                if (upperCase)
+                {
+                    result += getUpperCase();
+                }
 
                 // any old characters
                 for (int x = 0; x < LENGTH; x++)
                 {
                     result += getLowerCase();
+                }
+
+                if (specialChar)
+                {
+                    result += getSpecial();
                 }
 
             }
@@ -37,8 +50,15 @@ namespace PasswordGenerator
 
                 result = "";
 
-                result += getDigit();
-                result += getUpperCase();
+                if (digit)
+                {
+                    result += getDigit();
+                }
+
+                if (upperCase)
+                {
+                    result += getUpperCase();
+                }
 
                 //english phonemes
                 string english = string.Empty;
@@ -48,6 +68,11 @@ namespace PasswordGenerator
                 }
 
                 result += english;
+
+                if (specialChar)
+                {
+                    result += getSpecial();
+                }
 
             }
             else if (type == PasswordType.Xkcd)

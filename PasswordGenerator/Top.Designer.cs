@@ -37,34 +37,34 @@
             this.rbSimple = new System.Windows.Forms.RadioButton();
             this.rbPronouncable = new System.Windows.Forms.RadioButton();
             this.rbXkcd = new System.Windows.Forms.RadioButton();
+            this.cbNumber = new System.Windows.Forms.CheckBox();
+            this.cbCap = new System.Windows.Forms.CheckBox();
+            this.cbSpecial = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbDisplay
             // 
             this.tbDisplay.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDisplay.Location = new System.Drawing.Point(19, 24);
-            this.tbDisplay.Margin = new System.Windows.Forms.Padding(2);
+            this.tbDisplay.Location = new System.Drawing.Point(28, 37);
             this.tbDisplay.Name = "tbDisplay";
-            this.tbDisplay.Size = new System.Drawing.Size(312, 129);
+            this.tbDisplay.Size = new System.Drawing.Size(466, 196);
             this.tbDisplay.TabIndex = 0;
             this.tbDisplay.Text = "";
             // 
             // tbThis
             // 
             this.tbThis.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbThis.Location = new System.Drawing.Point(19, 172);
-            this.tbThis.Margin = new System.Windows.Forms.Padding(2);
+            this.tbThis.Location = new System.Drawing.Point(28, 265);
             this.tbThis.Name = "tbThis";
-            this.tbThis.Size = new System.Drawing.Size(312, 21);
+            this.tbThis.Size = new System.Drawing.Size(466, 28);
             this.tbThis.TabIndex = 1;
             // 
             // btnRun
             // 
-            this.btnRun.Location = new System.Drawing.Point(281, 274);
-            this.btnRun.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRun.Location = new System.Drawing.Point(418, 467);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(50, 23);
+            this.btnRun.Size = new System.Drawing.Size(75, 35);
             this.btnRun.TabIndex = 2;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = true;
@@ -72,10 +72,9 @@
             // 
             // btnCopy
             // 
-            this.btnCopy.Location = new System.Drawing.Point(227, 274);
-            this.btnCopy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCopy.Location = new System.Drawing.Point(336, 467);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(50, 23);
+            this.btnCopy.Size = new System.Drawing.Size(75, 35);
             this.btnCopy.TabIndex = 3;
             this.btnCopy.Text = "Copy";
             this.btnCopy.UseVisualStyleBackColor = true;
@@ -88,24 +87,24 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(342, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(513, 33);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // rbSimple
             // 
             this.rbSimple.AutoSize = true;
-            this.rbSimple.Location = new System.Drawing.Point(19, 199);
+            this.rbSimple.Location = new System.Drawing.Point(28, 306);
+            this.rbSimple.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbSimple.Name = "rbSimple";
-            this.rbSimple.Size = new System.Drawing.Size(56, 17);
+            this.rbSimple.Size = new System.Drawing.Size(82, 24);
             this.rbSimple.TabIndex = 6;
             this.rbSimple.TabStop = true;
             this.rbSimple.Text = "Simple";
@@ -114,9 +113,10 @@
             // rbPronouncable
             // 
             this.rbPronouncable.AutoSize = true;
-            this.rbPronouncable.Location = new System.Drawing.Point(19, 222);
+            this.rbPronouncable.Location = new System.Drawing.Point(28, 342);
+            this.rbPronouncable.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbPronouncable.Name = "rbPronouncable";
-            this.rbPronouncable.Size = new System.Drawing.Size(91, 17);
+            this.rbPronouncable.Size = new System.Drawing.Size(132, 24);
             this.rbPronouncable.TabIndex = 7;
             this.rbPronouncable.TabStop = true;
             this.rbPronouncable.Text = "Pronouncable";
@@ -125,19 +125,59 @@
             // rbXkcd
             // 
             this.rbXkcd.AutoSize = true;
-            this.rbXkcd.Location = new System.Drawing.Point(19, 245);
+            this.rbXkcd.Location = new System.Drawing.Point(28, 377);
+            this.rbXkcd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbXkcd.Name = "rbXkcd";
-            this.rbXkcd.Size = new System.Drawing.Size(48, 17);
+            this.rbXkcd.Size = new System.Drawing.Size(66, 24);
             this.rbXkcd.TabIndex = 8;
             this.rbXkcd.TabStop = true;
             this.rbXkcd.Text = "xkcd";
             this.rbXkcd.UseVisualStyleBackColor = true;
             // 
+            // cbNumber
+            // 
+            this.cbNumber.AutoSize = true;
+            this.cbNumber.Checked = true;
+            this.cbNumber.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbNumber.Location = new System.Drawing.Point(336, 317);
+            this.cbNumber.Name = "cbNumber";
+            this.cbNumber.Size = new System.Drawing.Size(143, 24);
+            this.cbNumber.TabIndex = 9;
+            this.cbNumber.Text = "include number";
+            this.cbNumber.UseVisualStyleBackColor = true;
+            // 
+            // cbCap
+            // 
+            this.cbCap.AutoSize = true;
+            this.cbCap.Checked = true;
+            this.cbCap.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbCap.Location = new System.Drawing.Point(336, 348);
+            this.cbCap.Name = "cbCap";
+            this.cbCap.Size = new System.Drawing.Size(135, 24);
+            this.cbCap.TabIndex = 10;
+            this.cbCap.Text = "include capitol";
+            this.cbCap.UseVisualStyleBackColor = true;
+            // 
+            // cbSpecial
+            // 
+            this.cbSpecial.AutoSize = true;
+            this.cbSpecial.Checked = true;
+            this.cbSpecial.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbSpecial.Location = new System.Drawing.Point(336, 379);
+            this.cbSpecial.Name = "cbSpecial";
+            this.cbSpecial.Size = new System.Drawing.Size(138, 24);
+            this.cbSpecial.TabIndex = 11;
+            this.cbSpecial.Text = "include special";
+            this.cbSpecial.UseVisualStyleBackColor = true;
+            // 
             // Top
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 307);
+            this.ClientSize = new System.Drawing.Size(513, 525);
+            this.Controls.Add(this.cbSpecial);
+            this.Controls.Add(this.cbCap);
+            this.Controls.Add(this.cbNumber);
             this.Controls.Add(this.rbXkcd);
             this.Controls.Add(this.rbPronouncable);
             this.Controls.Add(this.rbSimple);
@@ -147,7 +187,6 @@
             this.Controls.Add(this.tbDisplay);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Top";
             this.Text = "Pwd Gen";
             this.Load += new System.EventHandler(this.Top_Load);
@@ -169,6 +208,9 @@
         private System.Windows.Forms.RadioButton rbSimple;
         private System.Windows.Forms.RadioButton rbPronouncable;
         private System.Windows.Forms.RadioButton rbXkcd;
+        private System.Windows.Forms.CheckBox cbNumber;
+        private System.Windows.Forms.CheckBox cbCap;
+        private System.Windows.Forms.CheckBox cbSpecial;
     }
 }
 

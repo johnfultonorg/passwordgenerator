@@ -28,7 +28,8 @@ namespace PasswordGenerator
             }
 
 
-            string result = newPassword.getPassword(thisType);
+            string result = newPassword.getPassword(thisType, cbNumber.Checked,
+                cbCap.Checked, cbSpecial.Checked);
 
             tbDisplay.AppendText(result + "\r\n");
             tbDisplay.ScrollToCaret();
@@ -43,7 +44,7 @@ namespace PasswordGenerator
 
         private void Top_Load(object sender, EventArgs e)
         {
-
+            rbXkcd.Select();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
