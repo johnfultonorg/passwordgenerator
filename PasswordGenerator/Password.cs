@@ -75,14 +75,41 @@ namespace PasswordGenerator
                 }
 
             }
+
             else if (type == PasswordType.Xkcd)
             {
-                //common words
+                // 4 comon words, selected randomly. 
+                // Optionally include a uppercase character, a digit and a special character
+
                 string common = string.Empty;
-                common += getWord() + " ";
+
+                // first word
+                if (upperCase)
+                {
+                    common += getWord(true) + " ";
+                }
+                else
+                {
+                    common += getWord() + " ";
+                }
+
                 common += getWord() + " ";
                 common += getWord() + " ";
                 common += getWord();
+
+                if (digit && specialChar)
+                {
+                    common += " " + getDigit() + getSpecial();
+                }
+                else if (digit)
+                {
+                    common += " " + getDigit();
+                }
+                else if (specialChar)
+                {
+                    common += " " + getSpecial();
+                }
+
                 result = common;
             }
 
@@ -149,6 +176,11 @@ namespace PasswordGenerator
         }
 
         string getWord()
+        {
+            return getWord(false);
+        }
+
+        string getWord(Boolean upperCase)
         {
             // Common words from // http://www.wordfrequency.info/top5000.asp
             string[] words =
@@ -5154,7 +5186,13 @@ namespace PasswordGenerator
                 "till"
             };
 
-            return chooser(words);
+            string choice = chooser(words);
+            if (upperCase)
+            {
+                choice = choice.Substring(0, 1).ToUpper() + choice.Substring(1);
+            }
+
+            return choice;
         }
 
         string chooser(string input)

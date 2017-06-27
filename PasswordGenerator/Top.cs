@@ -1,4 +1,5 @@
 ﻿﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace PasswordGenerator
@@ -44,7 +45,17 @@ namespace PasswordGenerator
 
         private void Top_Load(object sender, EventArgs e)
         {
-            rbXkcd.Select();
+            rbPronouncable.Select();
+            btnRun.PerformClick();
+            btnCopy.PerformClick();
+
+            var thisApp = Assembly.GetExecutingAssembly();
+            AssemblyName name = new AssemblyName(thisApp.FullName);
+            string versionNumber = "v. " + name.Version;
+            string[] versionArray = versionNumber.Split('.');
+            string version = versionArray[0] + versionArray[1] + "." + versionArray[2];
+
+            this.Text += " " + version;
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
