@@ -36,17 +36,17 @@
             // 
             this.txtAbout.Enabled = false;
             this.txtAbout.Location = new System.Drawing.Point(9, 8);
-            this.txtAbout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAbout.Margin = new System.Windows.Forms.Padding(2);
             this.txtAbout.Multiline = true;
             this.txtAbout.Name = "txtAbout";
-            this.txtAbout.Size = new System.Drawing.Size(318, 97);
+            this.txtAbout.Size = new System.Drawing.Size(758, 305);
             this.txtAbout.TabIndex = 0;
             this.txtAbout.TextChanged += new System.EventHandler(this.txtAbout_TextChanged);
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(275, 109);
-            this.btnOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOk.Location = new System.Drawing.Point(717, 317);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(2);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(50, 23);
             this.btnOk.TabIndex = 1;
@@ -58,10 +58,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 139);
+            this.ClientSize = new System.Drawing.Size(778, 351);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtAbout);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "About";
             this.Text = "About";
             this.Load += new System.EventHandler(this.About_Load);

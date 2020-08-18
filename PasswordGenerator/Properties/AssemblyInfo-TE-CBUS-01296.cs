@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("PasswordGenerator")]
-[assembly: AssemblyCopyright("MIT License")]
+[assembly: AssemblyCopyright("Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
